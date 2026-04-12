@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="fruit ninja"
+run/main_scene="uid://pwjinws2dc6h"
 config/features=PackedStringArray("4.6", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://assets/images/icon.svg"
+
+[autoload]
+
+GameManager="*uid://bwinckj75as51"
 
 [physics]
 

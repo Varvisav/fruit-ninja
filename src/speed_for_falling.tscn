@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://4r701onqobd7"]
+
+[ext_resource type="Script" uid="uid://buo7mbhtent72" path="res://speed_for_falling.gd" id="1_ympri"]
+[ext_resource type="PackedScene" uid="uid://cden11hgtr5cy" path="res://assets/images/banana.tscn" id="2_e2fp1"]
+[ext_resource type="PackedScene" uid="uid://drd4gsmc3v7m0" path="res://assets/images/grapes.tscn" id="3_0pgme"]
+[ext_resource type="PackedScene" uid="uid://dq3v5c7g4pec0" path="res://assets/images/bomb.tscn" id="4_stlak"]
+[ext_resource type="PackedScene" uid="uid://dg6j0htr05mqb" path="res://assets/images/limon.tscn" id="5_ygk5x"]
+[ext_resource type="PackedScene" uid="uid://djgn7pwxyj6kk" path="res://assets/images/pineapple.tscn" id="6_4kj05"]
+[ext_resource type="PackedScene" uid="uid://bkl12cgxxgah7" path="res://assets/images/strawberry.tscn" id="7_nswe7"]
+
+[node name="SpeedForFalling" type="Node2D" unique_id=819090619]
+script = ExtResource("1_ympri")
+
+[node name="Banana" parent="." unique_id=749967489 instance=ExtResource("2_e2fp1")]
+
+[node name="Grapes" parent="." unique_id=741095395 instance=ExtResource("3_0pgme")]
+
+[node name="Bomb" parent="." unique_id=1322870876 instance=ExtResource("4_stlak")]
+
+[node name="Limon" parent="." unique_id=54679855 instance=ExtResource("5_ygk5x")]
+
+[node name="Pineapple" parent="." unique_id=526660785 instance=ExtResource("6_4kj05")]
+
+[node name="Strawberry" parent="." unique_id=2070571999 instance=ExtResource("7_nswe7")]

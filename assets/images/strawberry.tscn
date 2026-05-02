@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bkl12cgxxgah7"]
+
+[ext_resource type="Texture2D" uid="uid://bf1bjj0bfymlt" path="res://assets/images/strawberry.svg" id="1_ldfte"]
+
+[node name="Strawberry" type="Sprite2D" unique_id=2070571999]
+texture = ExtResource("1_ldfte")

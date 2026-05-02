@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://drd4gsmc3v7m0"]
+
+[ext_resource type="Texture2D" uid="uid://buyye4rpybjff" path="res://assets/images/grapes.svg" id="1_wnkks"]
+
+[node name="Grapes" type="Sprite2D" unique_id=741095395]
+texture = ExtResource("1_wnkks")

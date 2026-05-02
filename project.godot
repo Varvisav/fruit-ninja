@@ -13,7 +13,6 @@ config_version=5
 config/name="fruit ninja"
 run/main_scene="uid://pwjinws2dc6h"
 config/features=PackedStringArray("4.6", "Mobile")
-config/icon="res://assets/images/icon.svg"
 
 [autoload]
 

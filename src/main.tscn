@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://deoleho5s4s20"]
 
 [ext_resource type="Script" uid="uid://cennnxoarmsw8" path="res://src/main.gd" id="1_eewff"]
-[ext_resource type="PackedScene" uid="uid://cp1a4niutek1p" path="res://src/falling_object.tscn" id="2_gh0ne"]
+[ext_resource type="PackedScene" uid="uid://cp1a4niutek1p" path="res://src/spawner.tscn" id="2_gh0ne"]
 
 [node name="Main" type="CanvasLayer" unique_id=2112103953]
 script = ExtResource("1_eewff")

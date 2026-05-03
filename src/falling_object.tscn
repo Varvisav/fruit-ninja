@@ -1,9 +1,11 @@
-[gd_scene format=3 uid="uid://cp1a4niutek1p"]
+[gd_scene format=3 uid="uid://4r701onqobd7"]
 
-[ext_resource type="Script" uid="uid://nqe65eksdbwr" path="res://src/falling_object.gd" id="1_4yiyl"]
-[ext_resource type="PackedScene" uid="uid://4r701onqobd7" path="res://src/speed_for_falling.tscn" id="2_yxp0n"]
+[ext_resource type="Script" uid="uid://buo7mbhtent72" path="res://falling_object.gd" id="1_louo1"]
+[ext_resource type="PackedScene" uid="uid://drd4gsmc3v7m0" path="res://assets/images/grapes.tscn" id="3_fd17o"]
+[ext_resource type="PackedScene" uid="uid://dq3v5c7g4pec0" path="res://assets/images/bomb.tscn" id="4_h84li"]
+[ext_resource type="PackedScene" uid="uid://dg6j0htr05mqb" path="res://assets/images/limon.tscn" id="5_gb6og"]
 
-[node name="Spawner" type="Node2D" unique_id=2044332188]
-script = ExtResource("1_4yiyl")
-
-[node name="SpeedForFalling" parent="." unique_id=819090619 instance=ExtResource("2_yxp0n")]
+[node name="FallingObject" type="Node2D" unique_id=819090619]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_louo1")
+objects = Array[PackedScene]([ExtResource("5_gb6og"), ExtResource("3_fd17o"), ExtResource("4_h84li")])

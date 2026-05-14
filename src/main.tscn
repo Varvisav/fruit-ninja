@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cennnxoarmsw8" path="res://src/main.gd" id="1_eewff"]
 [ext_resource type="PackedScene" uid="uid://cp1a4niutek1p" path="res://src/spawner.tscn" id="2_gh0ne"]
+[ext_resource type="PackedScene" uid="uid://ba1wdiun0kbin" path="res://src/hud.tscn" id="3_5q4o7"]
 
 [node name="Main" type="CanvasLayer" unique_id=2112103953]
 script = ExtResource("1_eewff")
@@ -9,5 +10,7 @@ script = ExtResource("1_eewff")
 [node name="Spawner" parent="." unique_id=2044332188 instance=ExtResource("2_gh0ne")]
 
 [node name="Timer" type="Timer" parent="Spawner" unique_id=803084368]
-wait_time = 2.173
+wait_time = 4.0
 autostart = true
+
+[node name="Hud" parent="." unique_id=342383121 instance=ExtResource("3_5q4o7")]

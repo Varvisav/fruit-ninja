@@ -1,3 +1,46 @@
 [gd_scene format=3 uid="uid://d158o8jys80sd"]
 
-[node name="Node2D" type="Node2D" unique_id=763388437]
+[ext_resource type="Script" uid="uid://d1hevp2arxhj3" path="res://src/restart_game.gd" id="1_wn45r"]
+
+[node name="Restart" type="VBoxContainer" unique_id=1931948150]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.0
+offset_top = -122.0
+offset_right = 157.0
+offset_bottom = 122.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_wn45r")
+
+[node name="BestScore" type="Label" parent="." unique_id=1798257797]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+
+[node name="ScoreEnd" type="Label" parent="." unique_id=1983327965]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+
+[node name="RestartButton" type="Button" parent="." unique_id=948313636]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "RESTART"
+
+[node name="QuitButton" type="Button" parent="." unique_id=708558648]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "QUIT
+"
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

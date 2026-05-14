@@ -1,11 +1,33 @@
 [gd_scene format=3 uid="uid://4r701onqobd7"]
 
-[ext_resource type="Script" uid="uid://buo7mbhtent72" path="res://falling_object.gd" id="1_louo1"]
+[ext_resource type="Script" uid="uid://buo7mbhtent72" path="res://src/falling_object.gd" id="1_louo1"]
 [ext_resource type="PackedScene" uid="uid://drd4gsmc3v7m0" path="res://assets/images/grapes.tscn" id="3_fd17o"]
 [ext_resource type="PackedScene" uid="uid://dq3v5c7g4pec0" path="res://assets/images/bomb.tscn" id="4_h84li"]
 [ext_resource type="PackedScene" uid="uid://dg6j0htr05mqb" path="res://assets/images/limon.tscn" id="5_gb6og"]
+[ext_resource type="PackedScene" uid="uid://cden11hgtr5cy" path="res://assets/images/banana.tscn" id="5_mkmqb"]
+[ext_resource type="PackedScene" uid="uid://djgn7pwxyj6kk" path="res://assets/images/pineapple.tscn" id="6_louo1"]
+[ext_resource type="PackedScene" uid="uid://bkl12cgxxgah7" path="res://assets/images/strawberry.tscn" id="7_louo1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ccav"]
+size = Vector2(6033.749, 5466.25)
 
 [node name="FallingObject" type="Node2D" unique_id=819090619]
-scale = Vector2(0.2, 0.2)
+position = Vector2(-5.9604645e-08, 0)
+scale = Vector2(0.15, 0.15)
 script = ExtResource("1_louo1")
-objects = Array[PackedScene]([ExtResource("5_gb6og"), ExtResource("3_fd17o"), ExtResource("4_h84li")])
+objects = Array[PackedScene]([ExtResource("5_gb6og"), ExtResource("3_fd17o"), ExtResource("4_h84li"), ExtResource("5_mkmqb"), ExtResource("6_louo1"), ExtResource("7_louo1")])
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=869516280]
+position = Vector2(9.999999, -4.9999995)
+rect = Rect2(-499.99994, -484.99994, 964.9999, 969.9999)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1456951287]
+scale = Vector2(0.2, 0.2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1837812240]
+position = Vector2(-1.5258789e-05, -3.0517578e-05)
+scale = Vector2(0.2, 0.3)
+shape = SubResource("RectangleShape2D_7ccav")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
